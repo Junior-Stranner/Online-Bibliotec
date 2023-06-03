@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../listaLivro.css">
+  <title>Lista de Livros</title>
+</head>
+
+<body>
+  <div class="top-content">
+    <div class="nav-bar">
+      <nav>
+        <ul>
+          <li><a href="/listaLivro">HOME</a></li>
+          <li><a href="/homeLivro">CADASTRO DE LIVROS</a></li>
+          <li><a href="/listaUsuario">ADM</a></li>
+          <li><a href="/loginUsuario">SAIR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="table-content">
+    <table class="book-list">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Paginas</th>
+          <th scope="col">Ano Publicacao</th>
+          <th scope="col">Excluir</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Aluguel</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr data-th-each="livro: ${livros}">
+          <td data-th-text="${livro.id}"></td>
+          <td data-th-text="${livro.titulo}"></td>
+          <td data-th-text="${livro.genero}"></td>
+          <td data-th-text="${livro.paginas}"></td>
+          <td data-th-text="${livro.anoPublicacao}"></td>
+
+          <td><a class="btn" th:href="@{'/excluir/'+${livro.id}}">Excluir</a></td>
+          <td><a class="btn" th:href="@{'/editar/'+${livro.id}}">Editar</a></td>
+
+          <td>
+            <div th:if="${livro.status == true}">
+              <a class="btn" th:href="@{'/devolver/'+${livro.id}}">Devolver</a>
+            </div>
+            <div th:if="${livro.status == false}">
+              <a class="btn" th:href="@{'/alugar/'+${livro.id}}">Alugar</a>
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

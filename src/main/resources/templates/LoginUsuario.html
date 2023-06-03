@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/pilha-de-livros.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="box">
+        <img id="background-img" src="../biblioteca.jpg" alt="Minha Figura">
+        <div id="login-usuario">
+            <form method="post" action="/verificaLogin">
+                <h1>Login Biblioteca Virtual</h1>
+                <label>E-mail</label>
+                <input class="input-dados" type="email" name="email" placeholder="Digite e-mail" required>
+                <p></p>
+
+                <label>Senha</label>
+                <input class="input-dados" type="password" name="senha" placeholder="Digite senha" required>
+                <p></p>
+
+                <button type="submit" id="botao">Entrar</button>
+                <p></p>
+                
+                <span><a href="/cadastroUsuario">Não possui conta? Cadastre-se</a></span>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

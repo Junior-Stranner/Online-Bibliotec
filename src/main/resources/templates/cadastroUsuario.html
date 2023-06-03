@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/pilha-de-livros.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <title>CADASTRO</title>
+</head>
+
+<body>
+    <div id="box-cadastro">
+        <img id="background-img-cadastro" src="../cadastro.jpg" alt="Minha Figura">
+        <div id="cadastro-usuario">
+            <form method="post" action="/cadastroUsuario">
+                <div th:if="${usuario}">
+                    <input type="hidden" name="id" th:value="${usuario?.id}">
+                </div>
+                <h1 style="font-weight: 800;">Cadastro de Usuário</h1>
+
+                <label for="nome">Nome:</label>
+                <input class="input-dados" type="text" placeholder="Digite Nome" name="nome"
+                    th:value="${usuario?.nome}"required>
+                <p></p>
+
+                <label for="email">Email:</label>
+                <input class="input-dados" type="email" placeholder="Digite e-mail" name="email"
+                    th:value="${usuario?.email}"required>
+                <p></p>
+
+                <label for="senha">Senha:</label>
+                <input class="input-dados" type="password" placeholder="Crie uma Senha" name="senha"
+                    th:value="${usuario?.senha}" required>
+                <p></p>
+                <div th:unless="${usuario}">
+                    <button id="botao-cadastro" type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+
+                <div th:if="${usuario}">
+                    <button id="botao-cadastro" type="submit" class="btn btn-primary">Alterar</button>
+                </div>
+                <p></p>
+
+                <span><a href="/loginUsuario">Já tenho uma conta</a></span>
+            </form>
+        </div>
+    </div>
+
+
+    </form>
+</body>
+
+</html>

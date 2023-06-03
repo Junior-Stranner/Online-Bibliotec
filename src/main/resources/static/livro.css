@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat+Alternates:wght@100;400&family=Montserrat:wght@200;300;500;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@200&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0a21;
+}
+
+.nav-bar {
+    background-color: #211f48;
+    color: #54d97a;
+    text-align: center;
+    height: 55px;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 14px;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #54d97a;
+
+}
+
+.title h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 44px;
+}
+
+.center-content {
+    margin-top: 38px;
+    margin-left: 280px;
+}
+
+.input-group {
+    margin-left: 497px;
+    padding: 15px;
+    width: 511px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.input-group select {
+    width: 102%;
+    padding: 5px;
+    margin-bottom: px;
+    background: #4c4a7b;
+    color: white;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: px;
+    background: #4c4a7b;
+    color: white;
+}
+
+.btn-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+button[type="submit"] {
+    background-color: #211f48;
+    color: #54d97a;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #54d97a;
+    color: #211f48;
+}

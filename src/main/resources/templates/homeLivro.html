@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../livro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/pilha-de-livros.png" type="image/x-icon">
+    <title>Cadastro de livros</title>
+</head>
+
+<body>
+    <main>
+        <form class="cadastroCliente" method="POST" action="/homeLivro">
+            <div class="formulario" th:if="${livro}">
+                <input type="hidden" name="id" th:value="${livro?.id}">
+            </div>
+            <div class="top-content">
+                <div class="nav-bar">
+                    <nav>
+                        <ul>
+                            <li><a href="/listaLivro">HOME</a></li>
+                            <li><a href="/homeLivro">CADASTRO DE LIVROS</a></li>
+                            <li><a href="/listaUsuario">ADM</a></li>
+                            <li><a href="/loginUsuario">SAIR</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="title">
+                <h1>Cadastre um livro</h1>
+            </div>
+            <div class="center-content">
+                <div class="input-group">
+                    <label for="titulo">Titulo do Livro</label>
+                    <input type="text" placeholder="Ex: Jayme Mattos" name="titulo" th:value="${livro?.titulo}">
+                </div>
+                <div class="input-group">
+                    <label for="genero">Gênero</label>
+                    <select name="genero" th:value="${livro?.genero}">
+                        <option selected disabled hidden>Selecione um gênero</option>
+                        <option>Ação</option>
+                        <option>Aventura</option>
+                        <option>Biografia</option>
+                        <option>Clássico</option>
+                        <option>Drama</option>
+                        <option>Fantasia</option>
+                        <option>Ficção Científica</option>
+                        <option>História</option>
+                        <option>Horror</option>
+                        <option>Humor</option>
+                        <option>Poesia</option>
+                        <option>Romance</option>
+                        <option>Suspense</option>
+                        <option>Terror</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="numPag">Número de Páginas</label>
+                    <input type="number" name="paginas" th:value="${livro?.paginas}"></input>
+                </div>
+                <div class="input-group">
+                    <label for="anoPubli">Ano de publicação</label>
+                    <input type="date" name="anoPublicacao" th:value="${livro?.anoPublicacao}"></input>
+                </div>
+            </div>
+            <div class="btn-content">
+                <button type="submit">Cadastrar</button>
+            </div>
+
+
+        </form>
+    </main>
+</body>
+
+</html>

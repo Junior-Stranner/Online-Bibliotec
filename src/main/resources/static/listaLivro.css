@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat+Alternates:wght@100;400&family=Montserrat:wght@200;300;500;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@200&display=swap');
+
+
+body {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0e0d21;
+}
+
+.nav-bar {
+    background-color: #211f48;
+    color: #54d97a;
+    text-align: center;
+    height: 55px;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 14px;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #54d97a;
+
+}
+
+.table-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 120px;
+}
+
+.book-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.book-list th,
+.book-list td {
+    padding: 8px;
+    text-align: center;
+}
+
+.book-list th {
+    background-color: #54d97a;
+    color: #ffffff;
+}
+
+.book-list td {
+    background-color: #211f48;
+    color: #fff;
+}
+
+.book-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rental-btn {
+    background-color: #54d97a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.rental-btn:hover {
+    background-color: #211f48;
+}
